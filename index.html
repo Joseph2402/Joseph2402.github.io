@@ -6,7 +6,7 @@
     <title>Maria Joseph Andrew - Data Analyst Portfolio</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
@@ -14,7 +14,7 @@
             background-color: #f4f4f4;
         }
         .container {
-            width: 100%;
+            width: 80%;
             margin: auto;
             overflow: hidden;
         }
@@ -38,7 +38,7 @@
         header li {
             float: left;
             display: inline;
-            padding: 0 20px 0 20px;
+            padding: 0 20px;
         }
         header #branding {
             float: left;
@@ -57,26 +57,33 @@
             color: #77b300;
         }
         #showcase {
-            min-height: 400px;
-            background: url('showcase.jpg') no-repeat 0 -400px;
+            min-height: 500px;
+            background: url('showcase.jpg') no-repeat center center/cover;
             text-align: center;
             color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         #showcase h1 {
-            margin-top: 100px;
             font-size: 55px;
             margin-bottom: 10px;
         }
         #showcase p {
             font-size: 20px;
+            margin-top: 20px;
+            padding: 0 20px;
         }
         .content {
             padding: 20px;
             background: #fff;
-            margin-bottom: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .content h2 {
             color: #333;
+            margin-bottom: 20px;
         }
         footer {
             background: #333;
@@ -86,22 +93,51 @@
             margin-top: 30px;
         }
         .profile-container {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-}
-
-.profile-picture {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            margin: 20px auto;
+        }
+        .profile-picture {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        #projects h1 {
+            text-align: center;
+            text-decoration: underline;
+            margin-bottom: 40px;
+        }
+        #projects .content {
+            padding: 40px;
+        }
+        .skills ul {
+            list-style: none;
+            padding: 0;
+        }
+        .skills li {
+            background: #77b300;
+            color: #fff;
+            padding: 10px;
+            margin: 10px 0;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            header li {
+                display: block;
+                text-align: center;
+                padding: 10px 0;
+            }
+            header nav {
+                float: none;
+            }
+        }
     </style>
 </head>
 <body>
@@ -133,49 +169,27 @@
 
     <section class="content" id="projects">
         <div class="container">
-            <h1><u>PROJECTS</u></h1>
+            <h1>Projects</h1>
             <h2>Attrition Dashboard</h2>
 
-    <h2>Executive Summary</h2>
-    <p>
-        The Attrition Dashboard is designed to provide comprehensive insights into the factors contributing to attrition, helping HR professionals and management to understand trends and patterns. The project utilizes data sourced from Kaggle, which was cleaned and transformed using Excel, and visualized using Power BI.
-    </p>
+            <h2>Executive Summary</h2>
+            <p>
+                The Attrition Dashboard is designed to provide comprehensive insights into the factors contributing to attrition, helping HR professionals and management to understand trends and patterns. The project utilizes data sourced from Kaggle, which was cleaned and transformed using Excel, and visualized using Power BI.
+            </p>
 
-    <h2>Attrition Rate Metrics:</h2>
-     Displays overall attrition rates, segmented by department, job role, salary hike, years at company, education etc.
+            <h2>Attrition Rate Metrics:</h2>
+            <p>Displays overall attrition rates, segmented by department, job role, salary hike, years at company, education etc.</p>
 
-    <h2>Key Drivers:</h2>
-     Highlights major reasons for employee departures, such as compensation, job satisfaction, or management issues.
+            <h2>Key Drivers:</h2>
+            <p>Highlights major reasons for employee departures, such as compensation, job satisfaction, or management issues.</p>
 
-    <h2>Interactive Visualizations:</h2>
-     Includes charts, graphs, and heatmaps for a detailed and intuitive exploration of data.<br>
+            <h2>Interactive Visualizations:</h2>
+            <p>Includes charts, graphs, and heatmaps for a detailed and intuitive exploration of data.</p>
             <iframe title="Attrition Dashboard" width="1240" height="1060" src="https://app.powerbi.com/view?r=eyJrIjoiMDhmY2E3YmUtNjZkNi00ZWU2LWFjZTYtZWQ3OTYzZGQ1MjNhIiwidCI6IjNiYTBmZGRjLTUwZjktNDk0Yi1iM2ZhLTBiY2NkOTUzZTllZCJ9" frameborder="0" allowFullScreen="true"></iframe>
-
-<!--     <h2>Key Metrics and KPIs</h2>
-    <ul>
-        <li>Total Runs Scored</li>
-        <li>Wickets Taken</li>
-        <li>Batting and Bowling Averages</li>
-        <li>Strike Rates and Economy Rates</li>
-    </ul>
-
-    <h2>Challenges and Solutions</h2>
-    <ul>
-        <li><strong>Data Cleaning:</strong> Ensuring the accuracy and consistency of data from various seasons required extensive cleaning. Excel was used to handle missing values, standardize formats, and correct discrepancies.</li>
-        <li><strong>Data Transformation:</strong> Aggregating and preparing data for analysis involved using Excel to calculate averages, strike rates, and other performance metrics.</li>
-    </ul> -->
-            
-<!--             <iframe title="ipl2008-2024start" width="1250" height="1250" src="https://app.powerbi.com/view?r=eyJrIjoiZmQxZjBkNWItY2RlMC00ZDVhLTk3OTAtYWNkZmU2OWVlNjE1IiwidCI6IjNiYTBmZGRjLTUwZjktNDk0Yi1iM2ZhLTBiY2NkOTUzZTllZCJ9" frameborder="0" allowFullScreen="true"></iframe> -->
-<!--             <p><strong>Project 1:</strong> Sales Data Analysis</p>
-            <p>Analyzed sales data to identify trends and patterns to inform business strategies.</p>
-            <p><strong>Project 2:</strong> Customer Segmentation</p>
-            <p>Performed customer segmentation using clustering techniques to enhance marketing efforts.</p>
-            <p><strong>Project 3:</strong> Financial Performance Dashboard</p>
-            <p>Developed an interactive Power BI dashboard to track financial performance metrics.</p> -->
         </div>
     </section>
 
-    <section class="content" id="skills">
+    <section class="content skills" id="skills">
         <div class="container">
             <h2>Skills</h2>
             <ul>
